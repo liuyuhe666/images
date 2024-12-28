@@ -1,7 +1,7 @@
 {
   "name": "liuyuhe666-images",
-  "version": "1.0.0",
-  "description": "- [`https://github.com/Molunerfinn/PicGo`](https://github.com/Molunerfinn/PicGo)",
+  "version": "1.0.1",
+  "description": "😡 GitHub 图床",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
