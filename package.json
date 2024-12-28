@@ -1,0 +1,19 @@
+{
+  "name": "liuyuhe666-images",
+  "version": "1.0.0",
+  "description": "- [`https://github.com/Molunerfinn/PicGo`](https://github.com/Molunerfinn/PicGo)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liuyuhe666/images.git"
+  },
+  "author": "liuyuhe666",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/liuyuhe666/images/issues"
+  },
+  "homepage": "https://github.com/liuyuhe666/images#readme"
+}
