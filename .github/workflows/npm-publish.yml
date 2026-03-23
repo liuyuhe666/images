@@ -14,7 +14,7 @@ jobs:
         with:
          node-version: "20"
       - run: python3 version.py
-      - uses: JS-DevTools/npm-publish@v3
+      - uses: JS-DevTools/npm-publish@v4
         with:
           token: ${{ secrets.NPM_TOKEN }}
       - run: |
