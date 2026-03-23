@@ -1,0 +1,58 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#f8f9fa" />
+  
+  <text x="400" y="40" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#333">常用限流算法</text>
+
+  <g transform="translate(50, 80)">
+    <rect width="340" height="220" rx="10" fill="#fff" stroke="#dee2e6" stroke-width="2"/>
+    <text x="170" y="30" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="#007bff">1. 固定窗口 (Fixed Window)</text>
+    <line x1="40" y1="140" x2="300" y2="140" stroke="#6c757d" stroke-width="2" />
+    <rect x="60" y="80" width="100" height="60" fill="#e7f3ff" stroke="#007bff" />
+    <rect x="180" y="80" width="100" height="60" fill="#e7f3ff" stroke="#007bff" />
+    <text x="110" y="115" font-size="12" text-anchor="middle">窗口A (10/10)</text>
+    <text x="230" y="115" font-size="12" text-anchor="middle">窗口B (0/10)</text>
+    <path d="M150,140 Q170,60 190,140" fill="none" stroke="#dc3545" stroke-width="2" stroke-dasharray="4"/>
+    <text x="170" y="170" font-size="11" fill="#dc3545" text-anchor="middle">临界点突发流量风险</text>
+  </g>
+
+  <g transform="translate(410, 80)">
+    <rect width="340" height="220" rx="10" fill="#fff" stroke="#dee2e6" stroke-width="2"/>
+    <text x="170" y="30" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="#28a745">2. 滑动窗口 (Sliding Window)</text>
+    <line x1="40" y1="140" x2="300" y2="140" stroke="#6c757d" stroke-width="2" />
+    <rect x="60" y="130" width="40" height="10" fill="#ced4da" />
+    <rect x="100" y="130" width="40" height="10" fill="#ced4da" />
+    <rect x="140" y="130" width="40" height="10" fill="#ced4da" />
+    <rect x="100" y="125" width="120" height="20" fill="none" stroke="#28a745" stroke-width="2" />
+    <text x="160" y="165" font-size="11" fill="#28a745" text-anchor="middle">窗口随时间平滑移动，细化计数</text>
+  </g>
+
+  <g transform="translate(50, 320)">
+    <rect width="340" height="240" rx="10" fill="#fff" stroke="#dee2e6" stroke-width="2"/>
+    <text x="170" y="30" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="#fd7e14">3. 漏桶 (Leaky Bucket)</text>
+    <path d="M120,80 L220,80 L200,180 L140,180 Z" fill="#fff" stroke="#333" stroke-width="2"/>
+    <path d="M165,180 L165,210" stroke="#007bff" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="175" cy="195" r="3" fill="#007bff" />
+    <circle cx="160" cy="215" r="3" fill="#007bff" />
+    <text x="170" y="235" font-size="11" text-anchor="middle" fill="#666">恒定速度流出 (处理请求)</text>
+    <text x="170" y="130" font-size="11" text-anchor="middle">任意速率流入</text>
+  </g>
+
+  <g transform="translate(410, 320)">
+    <rect width="340" height="240" rx="10" fill="#fff" stroke="#dee2e6" stroke-width="2"/>
+    <text x="170" y="30" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="#6f42c1">4. 令牌桶 (Token Bucket)</text>
+    <rect x="130" y="100" width="80" height="100" fill="none" stroke="#333" stroke-width="2"/>
+    <rect x="140" y="170" width="60" height="10" rx="5" fill="#ffc107" />
+    <rect x="140" y="155" width="60" height="10" rx="5" fill="#ffc107" />
+    <rect x="140" y="140" width="60" height="10" rx="5" fill="#ffc107" />
+    <path d="M170,60 L170,90" stroke="#ffc107" stroke-width="2" marker-end="url(#arrow)"/>
+    <text x="170" y="55" font-size="11" text-anchor="middle">固定速率放入令牌</text>
+    <text x="170" y="220" font-size="11" text-anchor="middle">请求拿走令牌后处理</text>
+    <text x="260" y="160" font-size="11" fill="#28a745" text-anchor="middle">允许突发流量</text>
+  </g>
+
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="0" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#ffc107" />
+    </marker>
+  </defs>
+</svg>
